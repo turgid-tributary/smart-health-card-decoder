@@ -2,13 +2,15 @@
   "name": "smart-health-card-decoder",
   "version": "1.1.1",
   "description": "API for decoding a QR encoded SMART Health Card",
-  "main": "esm/index.js",
+  "module": "esm/index.js",
+  "main": "cjs/index.js",
   "types": "esm/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "npm run clean && npm run tsc && npm run rollup && npm run minify",
+    "build": "npm run clean && npm run tsc && npm run tsc-cjs && npm run rollup && npm run minify",
     "test": "jest",
     "tsc": "tsc && rm -rf ./esm/lib && mv ./esm/src/* ./esm/ && rm -r ./esm/src",
+    "tsc-cjs": "tsc -p tsconfig-cjs.json && rm -rf ./cjs/lib && mv ./cjs/src/* ./cjs/ && rm -r ./cjs/src",
     "tsc:index.d.ts": "tsc -p tsconfig.d.ts.json",
     "rollup": "rollup -c",
     "minify": "uglifyjs ./umd/smart-health-card-decoder.umd.js -c -m --mangle-props keep_quoted -o ./umd/smart-health-card-decoder.umd.min.js",
@@ -16,6 +18,7 @@
   },
   "files": [
     "umd",
+    "cjs",
     "esm",
     "lib"
   ],
