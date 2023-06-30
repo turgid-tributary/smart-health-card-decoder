@@ -2,6 +2,7 @@ WHAT.md
 node_modules/
 umd/
 esm/
+cjs/
 *.map
 .vscode
 TODO.md
