@@ -1,6 +1,6 @@
 {
   "name": "smart-health-card-decoder",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "API for decoding a QR encoded SMART Health Card",
   "module": "esm/index.js",
   "main": "cjs/index.js",
