@@ -1,6 +1,6 @@
 {
   "name": "@turgid-tributary/smart-health-card-decoder",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "API for decoding a QR encoded SMART Health Card",
   "module": "esm/index.js",
   "main": "cjs/index.js",
